@@ -1,0 +1,16 @@
+code#1:
+def main():
+    sales = []
+    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    for day in days:
+        while True:
+            try:
+                amount = float(input("Enter the sales for the {day}: "))
+                sales.append(amount)
+                break
+            except ValueError:
+                print("Please enter a valid number.")
+    total_sales = sum(sales)
+    print(f"The total sales for the week are: ${total_sales:.2f}")
+if __name__=="__main__":
+    main()
