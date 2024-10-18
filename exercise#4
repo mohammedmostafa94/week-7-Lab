@@ -1,0 +1,24 @@
+code#4:
+def number_analysis():
+    number_list = []
+    
+    for i in range(20):
+        while True:
+            try:
+                num = float(input("Enter number {i+1}: "))
+                number_list.append(num)
+                break
+            except ValueError:
+                print("Please enter a valid number.")
+
+    lowest_num = min(number_list)
+    highest_num = max(number_list)
+    total = sum(number_list)
+    avg = total / len(number_list)
+
+    print(f"The lowest number in the list: {lowest_num}")
+    print(f"The highest number in the list: {highest_num}")
+    print(f"The total of the numbers in the list: {total}")
+    print(f"The average of the numbers in the list: {avg}")
+    
+number_analysis()
