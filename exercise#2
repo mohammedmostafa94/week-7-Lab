@@ -1,0 +1,15 @@
+code#2:
+import random
+max_digits = 7
+start = 0
+end = 9
+def main():
+    numbers = [0] * 7
+    for index in range(max_digits):
+        numbers[index] = random.randint (start, end)
+    print("Here are the lottery numbers:")
+    for index in range(max_digits):
+        print(numbers[index], end="")
+    print()
+main()
+
