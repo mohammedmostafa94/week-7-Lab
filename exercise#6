@@ -1,0 +1,5 @@
+code#6:
+def diplay_number(numbers, n):
+    for number in numbers:
+        if number > n:
+            print(number)
