@@ -1,0 +1,15 @@
+code#5:
+def read_charge_accounts(file_name):
+    with open(file_name, "r") as file:
+        charge_accounts = [line.strip() for line in file]
+    return charge_accounts
+def main():
+    charge_accounts = read_charge_accounts("charge_accounts.txt")
+    account_num = input("Please enter a charge account number: ")
+
+    if account_num in charge_accounts:
+        print("The charge account number is valid.")
+    else:
+        print("The charge account number is invalid.")
+
+main()
