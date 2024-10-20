@@ -1,0 +1,15 @@
+code#9:
+with open("USPopulation.txt", "r") as file:
+    population_data = [int(population.strip()) for population in file.readlines()]
+
+    avaerage_change = (population_data[-1] - population_data[0]) / (len(population_data) - 1)
+    max_increase = max(population_data[i+1] - population_data[i] for i in range (len(population_data) - 1))
+    year_max_increase = 1950 + population_data.index(max_increase)
+
+    min_increase = min(population_data[i+1] - population_data[i] for i in range (len(population_data) - 1))
+    year_min_increase = 1950 + population_data.index(min_increase)
+
+    print(f"The average annual change in population during the time preiod: {average_change}")
+    print(f"The year with the greatest increase in population during the time period: {year_max_increase}")
+    print(f"The year with the smallest increase in population during the time period: {year_min_increase}")
+    
