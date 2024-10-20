@@ -1,0 +1,9 @@
+code#8:
+with open("popular_names.txt", "r") as file:
+    popular_names = [name.strip() for name in file.readlines()]
+
+    user_input = input("Enter a name: ")
+    if user_input in popular_names:
+        print(f"{user_input} was one of the most popular names.")
+    else:
+        print(f"{user_input} was not one of the most popular names.")
