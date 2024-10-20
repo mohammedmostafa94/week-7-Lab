@@ -1,0 +1,10 @@
+code#10:
+with open("WorldSeriesWinners.txt", "r") as file:
+    world_series_winners = [team.strip() for team in file.readlines()]
+
+    user_team = input("Enter the name of a team: ")
+
+    team_wins = world_series_winners.count(user_team)
+
+    print(f"The team '{user_team}' won the World Series {team_wins} times from 1903 through 2009.")
+    
